@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  &__text-box {
+    margin-right: 6rem;
+    width: calc((100% - 6rem) / 2);
+  }
+
+  &__info {
+    margin-bottom: 3rem;
+  }
+
+  &__image-box {
+    width: calc((100% - 6rem) / 2);
+  }
+}

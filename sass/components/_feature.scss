@@ -1,0 +1,33 @@
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rem 0;
+  max-width: 114rem;
+  margin: 0 auto;
+  transform: skewY(7deg);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    width: calc((100% - 3 * 6rem) / 4);
+    border-radius: 3px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+  }
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    fill: rgba($color-primary-light, 0.8);
+    font-weight: 100;
+    margin: 2rem 0 3rem;
+  }
+}

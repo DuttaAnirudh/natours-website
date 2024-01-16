@@ -1,0 +1,105 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../../assets/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__nav {
+    max-width: 155rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__navigation-menu {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0.5rem 2.5rem;
+    transition: all 0.2s;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: $color-white;
+      padding: 0.3rem 0;
+      transition: all 0.4s;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__link::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 50%,
+      $color-white 50%,
+      $color-white
+    );
+    background-size: 222%;
+    transition: all 0.4s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__link {
+    &:hover {
+      transform: scale(1.02);
+
+      &::after {
+        background-position: 100%;
+      }
+    }
+  }
+}
