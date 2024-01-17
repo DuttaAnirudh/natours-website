@@ -1,3 +1,18 @@
+/*
+Phone : 0 - 600px
+Tab-Portrait : 601 - 900px
+Tab-Landscape : 901 - 1200px
+[1200-1800] : Normal styles apply
+Big-Desktop :  1800px+
+
+$breakpoint arguement choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -23,6 +38,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -30,6 +54,9 @@ body {
 .container {
   padding: 3rem;
   background-color: var(--color-white); }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      padding: 0; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -48,11 +75,18 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     font-size: 2rem;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s;
     font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -65,6 +99,12 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: scale(1.2) translateY(-6px);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
