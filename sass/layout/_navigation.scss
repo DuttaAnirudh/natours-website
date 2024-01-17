@@ -1,6 +1,11 @@
 .navigation {
   display: none;
   overflow: hidden;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+
   &__checkbox {
     display: none;
   }

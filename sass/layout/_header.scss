@@ -11,6 +11,14 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @include respond(phone) {
+    clip-path: none;
+  }
+
   &__text-box {
     position: absolute;
     top: 40%;
@@ -39,6 +47,10 @@
     position: absolute;
     top: 4rem;
     right: 4rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__menu-list {
