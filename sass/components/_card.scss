@@ -5,12 +5,23 @@
   max-width: 114rem;
   margin: 0 auto;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   &__box {
     position: relative;
     perspective: 150rem;
     -moz-perspective: 150rem;
     margin: 0 3rem;
     width: calc((100% - 2 * 6rem) / 3);
+
+    @include respond(tab-port) {
+      width: 40rem;
+      &:not(:last-child) {
+        margin-bottom: 6rem;
+      }
+    }
   }
 
   &__side {
@@ -25,6 +36,7 @@
       transition: all 0.8s ease;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
       overflow: hidden;
+      padding-bottom: 5rem;
     }
 
     &--back {
@@ -32,6 +44,13 @@
       width: 100%;
       height: 100%;
       transform: rotateY(180deg);
+
+      @include respond(tab-port) {
+        position: relative;
+        transform: rotateY(0deg);
+        clip-path: polygon((0 15%, 100% 0, 100% 100%, 0 100%));
+        margin-top: -6rem;
+      }
 
       &-1 {
         background-image: linear-gradient(
@@ -61,6 +80,10 @@
 
   &__box:hover &__side--front {
     transform: rotateY(-180deg);
+
+    @include respond(tab-port) {
+      transform: rotateY(0deg);
+    }
   }
 
   &__box:hover &__side--back {
@@ -108,7 +131,15 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
-    &-span {
+
+    @include respond(tab-port) {
+      width: 90%;
+      text-align: right;
+    }
+
+    &-span,
+    &-media {
+      display: inline-block;
       text-align: right;
       font-size: 2.8rem;
       font-weight: 300;
@@ -143,6 +174,21 @@
         );
       }
     }
+
+    &-span {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+
+    &-media {
+      display: none;
+
+      @include respond(tab-port) {
+        display: inline-block;
+        padding: 1rem;
+      }
+    }
   }
 
   &__cta {
@@ -151,18 +197,39 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      margin: 0 auto;
+      padding: 7rem 4rem 4rem;
+    }
   }
   &__price-box {
     color: $color-white;
     text-align: center;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem !important;
+    }
   }
   &__price--only {
     font-size: 1.4rem;
     text-transform: uppercase;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
   }
   &__price--value {
     font-weight: 100;
     font-size: 6rem;
+
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
   }
 
   &__details {
