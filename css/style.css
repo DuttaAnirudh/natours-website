@@ -334,6 +334,10 @@ body {
   max-width: 114rem;
   margin: 0 auto;
   transform: skewY(7deg); }
+  @media only screen and (max-width: 56.25em) {
+    .feature {
+      flex-direction: column;
+      padding: 15rem 0; } }
   .feature__box {
     display: flex;
     flex-direction: column;
@@ -345,6 +349,11 @@ body {
     width: calc((100% - 3 * 6rem) / 4);
     border-radius: 3px;
     transition: all 0.2s; }
+    @media only screen and (max-width: 56.25em) {
+      .feature__box {
+        width: 40rem; }
+        .feature__box:not(:last-child) {
+          margin-bottom: 6rem; } }
     .feature__box:hover {
       transform: translateY(-1.5rem) scale(1.03); }
   .feature__icon {

@@ -7,6 +7,11 @@
   margin: 0 auto;
   transform: skewY(7deg);
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 15rem 0;
+  }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -18,6 +23,14 @@
     width: calc((100% - 3 * 6rem) / 4);
     border-radius: 3px;
     transition: all 0.2s;
+
+    @include respond(tab-port) {
+      width: 40rem;
+
+      &:not(:last-child) {
+        margin-bottom: 6rem;
+      }
+    }
 
     &:hover {
       transform: translateY(-1.5rem) scale(1.03);
