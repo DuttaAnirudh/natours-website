@@ -828,6 +828,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .footer {
+      max-width: 95rem; } }
   .footer__logo {
     height: 12rem;
     width: 15rem; }
@@ -836,6 +839,11 @@ body {
     justify-content: space-between;
     align-items: center;
     align-self: stretch; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__content {
+        flex-direction: column; }
+        .footer__content > *:first-child {
+          padding-bottom: 6rem; } }
   .footer__navigation {
     border: none;
     border-top: 1px solid #777;
