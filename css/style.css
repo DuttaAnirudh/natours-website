@@ -198,6 +198,9 @@ body {
   .section-stories > *:not(:first-child) {
     position: relative;
     z-index: 10; }
+  @media only screen and (max-width: 37.5em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
@@ -525,6 +528,9 @@ body {
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     padding: 6rem;
     transform: skewX(-12deg); }
+    @media only screen and (max-width: 37.5em) {
+      .story__box {
+        transform: skewX(0deg); } }
     .story__box:not(:last-child) {
       margin-bottom: 8rem; }
   .story__shape {
@@ -537,6 +543,9 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: skewX(12deg); }
+    @media only screen and (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0deg); } }
     .story__shape img {
       height: 15rem;
       transform: translateX(-3.5rem) scale(1.4);
@@ -554,6 +563,9 @@ body {
     transition: all 0.4s; }
   .story__text-box {
     transform: translateX(3rem) skewX(12deg); }
+    @media only screen and (max-width: 37.5em) {
+      .story__text-box {
+        transform: translateX(3rem) skewX(0deg); } }
   .story__box:hover .story__shape img {
     transform: scale(1.1) translateX(-3.2rem);
     -webkit-filter: brightness(75%) blur(3px);

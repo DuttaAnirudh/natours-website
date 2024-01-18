@@ -38,6 +38,10 @@
     position: relative;
     z-index: 10;
   }
+
+  @include respond(phone) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
