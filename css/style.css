@@ -51,6 +51,10 @@ html {
 body {
   box-sizing: border-box; }
 
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
+
 .container {
   padding: 3rem;
   background-color: var(--color-white); }
@@ -252,10 +256,17 @@ body {
   .about__text-box {
     margin-right: 6rem;
     width: calc((100% - 6rem) / 2); }
+    @media only screen and (max-width: 56.25em) {
+      .about__text-box {
+        margin-right: 0;
+        width: calc(100% - 6rem); } }
   .about__info {
     margin-bottom: 3rem; }
   .about__image-box {
     width: calc((100% - 6rem) / 2); }
+    @media only screen and (max-width: 56.25em) {
+      .about__image-box {
+        width: calc(100% - 6rem); } }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;

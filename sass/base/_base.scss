@@ -45,6 +45,11 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
 .container {
   padding: 3rem;
   background-color: var(--color-white);

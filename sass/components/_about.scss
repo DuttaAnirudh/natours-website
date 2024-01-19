@@ -12,6 +12,11 @@
   &__text-box {
     margin-right: 6rem;
     width: calc((100% - 6rem) / 2);
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      width: calc(100% - 6rem);
+    }
   }
 
   &__info {
@@ -20,5 +25,9 @@
 
   &__image-box {
     width: calc((100% - 6rem) / 2);
+
+    @include respond(tab-port) {
+      width: calc(100% - 6rem);
+    }
   }
 }
