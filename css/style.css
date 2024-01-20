@@ -571,7 +571,12 @@ body {
     transform: skewX(-12deg); }
     @media only screen and (max-width: 37.5em) {
       .story__box {
-        transform: skewX(0deg); } }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transform: skewX(0deg);
+        padding: 4rem 2rem; } }
     .story__box:not(:last-child) {
       margin-bottom: 8rem; }
   .story__shape {
@@ -586,7 +591,8 @@ body {
     transform: skewX(12deg); }
     @media only screen and (max-width: 37.5em) {
       .story__shape {
-        transform: skewX(0deg); } }
+        transform: skewX(0deg);
+        margin-bottom: 3rem; } }
     .story__shape img {
       height: 15rem;
       transform: translateX(-3.5rem) scale(1.4);
@@ -606,7 +612,7 @@ body {
     transform: translateX(3rem) skewX(12deg); }
     @media only screen and (max-width: 37.5em) {
       .story__text-box {
-        transform: translateX(3rem) skewX(0deg); } }
+        transform: skewX(0deg); } }
   .story__box:hover .story__shape img {
     transform: scale(1.1) translateX(-3.2rem);
     -webkit-filter: brightness(75%) blur(3px);

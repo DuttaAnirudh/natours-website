@@ -12,7 +12,12 @@
     transform: skewX(-12deg);
 
     @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       transform: skewX(0deg);
+      padding: 4rem 2rem;
     }
 
     &:not(:last-child) {
@@ -33,6 +38,7 @@
 
     @include respond(phone) {
       transform: skewX(0deg);
+      margin-bottom: 3rem;
     }
 
     & img {
@@ -59,7 +65,7 @@
     transform: translateX(3rem) skewX(12deg);
 
     @include respond(phone) {
-      transform: translateX(3rem) skewX(0deg);
+      transform: skewX(0deg);
     }
   }
 
